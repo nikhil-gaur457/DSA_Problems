@@ -6,6 +6,7 @@ public class Student {
     private String nameOfStream;
     private int yourId;
     private int marks;
+
     public Student(String studentsName, int yourID, int marks) {
         this.studentsName = studentsName;
         this.yourId = yourId;

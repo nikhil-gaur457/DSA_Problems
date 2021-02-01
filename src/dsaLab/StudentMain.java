@@ -10,6 +10,7 @@ public class StudentMain {
         int yourId = 0;
         int marks = 0;
         String studentsName = null;
+        int val;
         Student[] students = new Student[numberOfStudents];
         for (int i = 0; i < numberOfStudents; i++) {
             try {
