@@ -9,7 +9,7 @@ package dsaSelf.Array;
 
 import java.util.Scanner;
 
-public class ReversedArray {
+class ReversedArray {
     public static void main(String[] args) {
         System.out.print("Enter the size of an array : ");
         Scanner scanner = new Scanner(System.in);
