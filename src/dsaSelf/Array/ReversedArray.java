@@ -1,11 +1,11 @@
 /*   Created by IntelliJ IDEA.
  *   Author: Nikhil gaur (nikhil-gaur457)
  *   Date: 07-02-2021
- *   Time: 22:27
+ *   Time: 22:35
  *   File: ReversedArray.java
  */
 
-package dsaSelf;
+package dsaSelf.Array;
 
 import java.util.Scanner;
 
