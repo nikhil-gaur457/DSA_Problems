@@ -9,6 +9,7 @@ package dsaLab.LinkedList;
 
 class LinkedList {
     Node head;
+    Node tail;
 
     public static LinkedList insert(LinkedList list, int data) {
         Node newNode = new Node(data);
@@ -35,6 +36,21 @@ class LinkedList {
         }
     }
 
+    public void insertAtStart(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            head = newNode;
+            head.next = temp;
+        }
+    }
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        tail = newNode;
+    }
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list = insert(list, 1);
@@ -45,6 +61,8 @@ class LinkedList {
         list = insert(list, 6);
         list = insert(list, 7);
         list = insert(list, 8);
+        list.insertAtStart(0);
+        list.insertAtEnd(10);
         printList(list);
     }
 
