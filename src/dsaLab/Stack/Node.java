@@ -7,28 +7,34 @@
 
 package dsaLab.Stack;
 
+// StackNode class for data of nodes
 class StackNode {
     int data;
     StackNode next;
 
+    // No-argument constructor
     public StackNode() {
         data = 0;
         next = null;
     }
 
+    // parameterized constructor
     public StackNode(int data) {
         this.data = data;
         next = null;
     }
 }
 
+// StackByLinkedList class for creating the methods for stack
 class StackByLinkedList {
     StackNode top;
 
+    // No-argument constructor
     public StackByLinkedList() {
         top = null;
     }
 
+    // push method for insertion of element in stack
     public void push(StackNode newNode) {
         if (top == null) {
             top = newNode;
@@ -38,6 +44,7 @@ class StackByLinkedList {
         top = newNode;
     }
 
+    // pop method for removal of element in stack
     public void pop() {
         if (isEmpty()) {
             System.out.println("empty");
@@ -46,6 +53,7 @@ class StackByLinkedList {
         top = top.next;
     }
 
+    // peak method for top most element of stack
     public void peak() {
         if (isEmpty()) {
             System.out.println("no element");
@@ -55,14 +63,17 @@ class StackByLinkedList {
         }
     }
 
+    // isEmpty method for checking is stack empty or not
     public boolean isEmpty() {
         return (top == null);
     }
 
+    // isFull method for checking stack is full or not
     public boolean isFull() {
         return false;
     }
 
+    // display method for printing the values
     public void display() {
         if (isEmpty()) {
             System.out.println("empty");
@@ -76,6 +87,7 @@ class StackByLinkedList {
     }
 }
 
+// execution class for stack by linkedList
 class StackMain {
     public static void main(String[] args) {
         StackByLinkedList stack = new StackByLinkedList();
