@@ -28,27 +28,11 @@ class LinkedList {
 
     public static void printList(LinkedList list) {
         Node currNode = list.head;
-
         System.out.print("LinkedList: ");
         while (currNode != null) {
             System.out.print(currNode.data + " ");
             currNode = currNode.next;
         }
-    }
-
-    public void insertAtStart(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-        } else {
-            Node temp = head;
-            head = newNode;
-            head.next = temp;
-        }
-    }
-    public void insertAtEnd(int data) {
-        Node newNode = new Node(data);
-        tail = newNode;
     }
 
     public static void main(String[] args) {
@@ -66,9 +50,26 @@ class LinkedList {
         printList(list);
     }
 
+    public void insertAtStart(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            head = newNode;
+            head.next = temp;
+        }
+    }
+
+    public void insertAtEnd(int data) {
+        Node newNode = new Node(data);
+        tail = newNode;
+    }
+
     static class Node {
         int data;
         Node next;
+
         Node(int d) {
             data = d;
             next = null;
