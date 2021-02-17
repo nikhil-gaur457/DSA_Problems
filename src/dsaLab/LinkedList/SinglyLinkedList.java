@@ -57,7 +57,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public int nodecount() {
+    public int nodeCount() {
         NodeLinkedList temp = head;
         int count = 0;
         while (temp != null) {
