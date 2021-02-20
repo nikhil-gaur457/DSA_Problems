@@ -25,11 +25,12 @@ public class PowerCalc {
         }
     }
 
-    // method to calculate the expontent function used in main class
+    // method to calculate the exponent function used in main class
     private static int calculatePower(int base, int exponent) {
-        if (exponent == 1) {
-            return base;
+        if (exponent != 0) {
+            return (base * calculatePower(base, exponent - 1));
+        } else {
+            return 1;
         }
-        return calculatePower(base, exponent - 1);
     }
 }
