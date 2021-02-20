@@ -30,6 +30,6 @@ public class PowerCalc {
         if (exponent == 1) {
             return base;
         }
-        return calculate(base, exponent - 1);
+        return calculatePower(base, exponent - 1);
     }
 }
