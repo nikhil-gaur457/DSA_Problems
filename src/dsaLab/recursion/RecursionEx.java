@@ -1,4 +1,4 @@
-package dsaLab;
+package dsaLab.recursion;
 
 public class RecursionEx {
     public static void main(String[] args) {
