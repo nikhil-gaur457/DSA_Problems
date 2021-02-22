@@ -1,4 +1,4 @@
-package dsaLab;
+package dsaLab.array;
 
 public class Student {
     String studentsName;
