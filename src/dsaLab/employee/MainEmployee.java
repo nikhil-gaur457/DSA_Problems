@@ -5,7 +5,7 @@
  *   File: MainEmployee.java
  */
 
-package dsaLab;
+package dsaLab.employee;
 
 import java.util.ArrayList;
 

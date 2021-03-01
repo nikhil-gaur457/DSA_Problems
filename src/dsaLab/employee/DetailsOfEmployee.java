@@ -5,7 +5,7 @@
  *   File: DetailsOfEmployee.java
  */
 
-package dsaLab;
+package dsaLab.employee;
 
 public class DetailsOfEmployee {
     public NodeEmployee head;

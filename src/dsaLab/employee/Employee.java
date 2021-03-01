@@ -5,7 +5,7 @@
  *   File: Employee.java
  */
 
-package dsaLab;
+package dsaLab.employee;
 
 public class Employee {
     private int employeeID;
