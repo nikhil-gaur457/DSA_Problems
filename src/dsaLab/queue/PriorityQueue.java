@@ -9,7 +9,7 @@ package dsaLab.queue;
 
 public class PriorityQueue {
     public static void main(String[] args) {
-        java.util.PriorityQueue priorityQueue = new java.util.PriorityQueue();
+        java.util.PriorityQueue<Integer> priorityQueue = new java.util.PriorityQueue<>();
         priorityQueue.add(15);
         priorityQueue.add(25);
         priorityQueue.add(35);
