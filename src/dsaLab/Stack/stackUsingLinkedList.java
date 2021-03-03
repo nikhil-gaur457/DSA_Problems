@@ -2,7 +2,7 @@
  *   Author: Nikhil gaur (nikhil-gaur457)
  *   Date: 15-02-2021
  *   Time: 10:22
- *   File: Node.java
+ *   File: stackUsingLinkedList.java
  */
 
 package dsaLab.Stack;
