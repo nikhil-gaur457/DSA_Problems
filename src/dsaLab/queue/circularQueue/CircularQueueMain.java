@@ -15,13 +15,13 @@ public class CircularQueueMain {
         while(true)
         {
 
-            System.out.println("\n Press 1 For Insert");
-            System.out.println("\n Press 2 For delete");
-            System.out.println("\n Press 3 For traverse");
-            System.out.println("\n Press 4 For exit");
-            System.out.println("\n Press 5 For Last Elements");
-            System.out.println("\n Press 6 For First Element");
-            System.out.println("\n Enter Your Choice");
+            System.out.print("\n Press 1 For Insert");
+            System.out.print("\n Press 2 For delete");
+            System.out.print("\n Press 3 For traverse");
+            System.out.print("\n Press 4 For exit");
+            System.out.print("\n Press 5 For Last Elements");
+            System.out.print("\n Press 6 For First Element");
+            System.out.print("\n Enter Your Choice");
             Scanner scanner = new Scanner(System.in);
             int ch = scanner.nextInt();
 

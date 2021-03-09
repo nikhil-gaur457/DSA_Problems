@@ -11,7 +11,8 @@ import java.util.Scanner;
 
 public class CircularQueue {
     int ar[];
-    int Front, Rear;
+    int Front;
+    int Rear;
 
     CircularQueue() {
         ar = new int[5];
@@ -35,7 +36,6 @@ public class CircularQueue {
                 Rear = Rear + 1;
             } else if (Rear == 4 && Front != 0) {
                 Rear = 0;
-
             }
             ar[Rear] = data;
             System.out.println("data inserted...");
