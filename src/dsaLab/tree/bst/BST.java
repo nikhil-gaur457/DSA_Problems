@@ -8,10 +8,11 @@
 package dsaLab.tree.bst;
 
 public class BST {
-    public Node insert(Node root, Node newNode) {
+    // method to insert the root value.
+    public void insert(Node root, Node newNode) {
         if (root == null) {
             root = newNode;
-            return root;
+            return;
         }
         if (root.data > newNode.data) {
             if (root.leftChild == null) {
@@ -26,9 +27,9 @@ public class BST {
                 insert(root.rightChild, newNode);
             }
         }
-        return root;
     }
 
+    // this method will print the successor of the bs tree.
     public Node getSuccessor(Node root) {
         if (root == null) {
             return null;
@@ -40,6 +41,7 @@ public class BST {
         return temp;
     }
 
+    // this method will print the predecessor of the bs tree.
     public Node getPredecessor(Node root) {
         if (root == null) {
             return null;
@@ -51,6 +53,7 @@ public class BST {
         return temp;
     }
 
+    // method to delete the node
     public Node delete(Node root, int value) {
         if (root == null) {
             return null;
@@ -74,12 +77,33 @@ public class BST {
         return root;
     }
 
+    // preOrder will print as [root value, left of root, right of root]
     public void preOrder(Node root) {
         if (root == null) {
             return;
         }
-        System.out.println(root.data);
+        System.out.print(root.data + ", ");
         preOrder(root.leftChild);
         preOrder(root.rightChild);
+    }
+
+    // postOrder will print as [left of root, right of root, root value]
+    public void postOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        postOrder(root.leftChild);
+        postOrder(root.rightChild);
+        System.out.print(root.data + ", ");
+    }
+
+    // inOrder will print as [left of root, root value, right of root]
+    public void inOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(root.leftChild);
+        System.out.print(root.data + ", ");
+        inOrder(root.rightChild);
     }
 }
