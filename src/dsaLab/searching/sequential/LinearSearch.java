@@ -5,7 +5,7 @@
  *   File: LinearSearch.java
  */
 
-package dsaLab.searching;
+package dsaLab.searching.sequential;
 
 import java.util.Scanner;
 
