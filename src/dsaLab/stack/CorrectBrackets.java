@@ -5,7 +5,7 @@
  *   File: CorrectBrackets.java
  */
 
-package dsaLab.Stack;
+package dsaLab.stack;
 
 import java.util.Scanner;
 import java.util.Stack;
