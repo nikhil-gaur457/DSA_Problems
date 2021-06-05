@@ -5,7 +5,7 @@
  *   File: stackUsingLinkedList.java
  */
 
-package dsaLab.Stack;
+package dsaLab.stack;
 
 // StackNode class for data of nodes
 class StackNode {
