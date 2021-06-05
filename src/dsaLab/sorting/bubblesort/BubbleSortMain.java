@@ -5,7 +5,7 @@
  *   File: BubbleSortMain.java
  */
 
-package dsaLab.sorting;
+package dsaLab.sorting.bubblesort;
 
 public class BubbleSortMain {
     public static void main(String[] args) {
