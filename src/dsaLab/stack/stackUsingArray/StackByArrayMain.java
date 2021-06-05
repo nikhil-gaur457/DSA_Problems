@@ -5,7 +5,7 @@
  *   File: StackByArrayMain.java
  */
 
-package dsaLab.Stack.stackUsingArray;
+package dsaLab.stack.stackUsingArray;
 
 public class StackByArrayMain {
     public static void main(String[] args) {

@@ -5,12 +5,12 @@
  *   File: StackByArray.java
  */
 
-package dsaLab.Stack.stackUsingArray;
+package dsaLab.stack.stackUsingArray;
 
 public class StackByArray {
     final int MAX = 1000;
     int top;
-    int arr[] = new int[MAX];
+    int[] arr = new int[MAX];
 
     public StackByArray() {
         top = -1;
