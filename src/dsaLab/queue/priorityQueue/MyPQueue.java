@@ -9,7 +9,7 @@ package dsaLab.queue.priorityQueue;
 
 public class MyPQueue {
     int capacity;
-    int arr[];
+    int[] arr;
     int itemCount;
 
     public MyPQueue(int size) {
