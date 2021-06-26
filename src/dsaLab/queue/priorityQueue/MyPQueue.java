@@ -18,10 +18,6 @@ public class MyPQueue {
         this.itemCount = 0;
     }
 
-    public MyPQueue() {
-
-    }
-
     public int peek() {
         return arr[itemCount - 1];
     }
