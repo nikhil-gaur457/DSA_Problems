@@ -72,7 +72,6 @@ public class SinglyLinkedList {
         head = newnode;
     }
 
-
     public void display() {
         NodeLinkedList temp = head;
         while (temp != null) {
