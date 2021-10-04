@@ -9,13 +9,17 @@ package dsaLab.queue.priorityQueue;
 
 public class MyPQueue {
     int capacity;
-    int[] arr;
+    int arr[];
     int itemCount;
 
     public MyPQueue(int size) {
         this.capacity = 0;
         this.arr = new int[capacity];
         this.itemCount = 0;
+    }
+
+    public MyPQueue() {
+
     }
 
     public int peek() {
