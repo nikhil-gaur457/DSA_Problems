@@ -21,7 +21,16 @@ public class SinglyLinkedList {
         second.next = third;
         third.next = fourth;
         sll.display();
+        sll.insertAtBeginning(15);
+        sll.insertAtBeginning(2);
+        sll.display();
         System.out.println("length of list " + sll.length());
+    }
+
+    public void insertAtBeginning(int value) {
+        ListNode newNode = new ListNode(value);
+        newNode.next = head;
+        head = newNode;
     }
 
     public int length() {
