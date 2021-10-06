@@ -26,18 +26,23 @@ public class SinglyLinkedList {
         sll.insertAtBeginning(15);
         sll.insertAtBeginning(2);
         sll.display();
-        System.out.println("length of list " + sll.length());
 
         sll.insertAtEnd(20);
         sll.display();
+
+        sll.deleteAtFirst();
+        sll.display();
+        System.out.println("length of list " + sll.length());
     }
 
+    // method to insert new node at the beginning.
     public void insertAtBeginning(int value) {
         ListNode newNode = new ListNode(value);
         newNode.next = head;
         head = newNode;
     }
 
+    // method to insert new node at the end.
     public void insertAtEnd(int value) {
         ListNode newNode = new ListNode(value);
         if (head == null) {
@@ -51,6 +56,16 @@ public class SinglyLinkedList {
         current.next = newNode;
     }
 
+    // method to delete node at the front.
+    public void deleteAtFirst() {
+        if (head == null) {
+            System.out.println("List is Empty");
+        } else {
+            head = head.next;
+        }
+    }
+
+    // method to find the length of list.
     public int length() {
         if (head == null) {
             return 0;
@@ -64,6 +79,7 @@ public class SinglyLinkedList {
         return count;
     }
 
+    // method to display the list.
     public void display() {
         ListNode current = head;
         while (current != null) {
@@ -73,6 +89,7 @@ public class SinglyLinkedList {
         System.out.println("null");
     }
 
+    // Static class for ListNode.
     private static class ListNode {
         private final int data;
         private ListNode next;
