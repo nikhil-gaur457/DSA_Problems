@@ -21,16 +21,34 @@ public class SinglyLinkedList {
         second.next = third;
         third.next = fourth;
         sll.display();
+
+
         sll.insertAtBeginning(15);
         sll.insertAtBeginning(2);
         sll.display();
         System.out.println("length of list " + sll.length());
+
+        sll.insertAtEnd(20);
+        sll.display();
     }
 
     public void insertAtBeginning(int value) {
         ListNode newNode = new ListNode(value);
         newNode.next = head;
         head = newNode;
+    }
+
+    public void insertAtEnd(int value) {
+        ListNode newNode = new ListNode(value);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        ListNode current = head;
+        while (current.next != null) {
+            current= current.next;
+        }
+        current.next = newNode;
     }
 
     public int length() {
