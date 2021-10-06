@@ -21,6 +21,20 @@ public class SinglyLinkedList {
         second.next = third;
         third.next = fourth;
         sll.display();
+        System.out.println("length of list " + sll.length());
+    }
+
+    public int length() {
+        if (head == null) {
+            return 0;
+        }
+        int count = 0;
+        ListNode current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
     }
 
     public void display() {
