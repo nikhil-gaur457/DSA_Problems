@@ -38,6 +38,8 @@ public class SinglyLinkedList {
 
         sll.insert(3,12);
         sll.display();
+        sll.insert(9, 125);
+        sll.display();
 
         sll.delete(5);
         sll.display();
@@ -95,7 +97,7 @@ public class SinglyLinkedList {
         if (position == 1) {
             newNode.next = head;
             head = newNode;
-        } else {
+        } else if (position>1 && position <= length()){
             ListNode previous = head;
             int count = 1;
             while (count < position-1) {
@@ -104,6 +106,8 @@ public class SinglyLinkedList {
             }
             newNode.next = previous.next;
             previous.next = newNode;
+        } else {
+            System.out.println("invalid position");
         }
     }
 
