@@ -38,6 +38,9 @@ public class SinglyLinkedList {
 
         sll.insert(3,12);
         sll.display();
+
+        sll.delete(5);
+        sll.display();
         System.out.println("length of list " + sll.length());
     }
 
@@ -99,9 +102,24 @@ public class SinglyLinkedList {
                 previous = previous.next;
                 count++;
             }
-            ListNode current = previous.next;
-            newNode.next = current;
+            newNode.next = previous.next;
             previous.next = newNode;
+        }
+    }
+
+    // method to delete the node the given position.
+    public void delete(int position) {
+        if (position == 1) {
+            head = head.next;
+        } else {
+            ListNode previous = head;
+            int count = 1;
+            while (count < position-1) {
+                previous = previous.next;
+                count++;
+            }
+            ListNode current = previous.next;
+            previous.next = current.next;
         }
     }
 
@@ -123,7 +141,7 @@ public class SinglyLinkedList {
     public void display() {
         ListNode current = head;
         while (current != null) {
-            System.out.print(current.data + "->");
+            System.out.print(current.data + " -> ");
             current = current.next;
         }
         System.out.println("null");
