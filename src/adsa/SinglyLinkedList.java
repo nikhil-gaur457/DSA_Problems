@@ -36,13 +36,15 @@ public class SinglyLinkedList {
         sll.deleteAtLast();
         sll.display();
 
-        sll.insert(3,12);
+        sll.insert(3, 12);
         sll.display();
         sll.insert(9, 125);
         sll.display();
 
         sll.delete(5);
         sll.display();
+
+        sll.middleNode();
         System.out.println("length of list " + sll.length());
     }
 
@@ -97,10 +99,10 @@ public class SinglyLinkedList {
         if (position == 1) {
             newNode.next = head;
             head = newNode;
-        } else if (position>1 && position <= length()){
+        } else if (position > 1 && position <= length()) {
             ListNode previous = head;
             int count = 1;
-            while (count < position-1) {
+            while (count < position - 1) {
                 previous = previous.next;
                 count++;
             }
@@ -115,16 +117,30 @@ public class SinglyLinkedList {
     public void delete(int position) {
         if (position == 1) {
             head = head.next;
-        } else {
+        } else if (position > 1 && position <= length()) {
             ListNode previous = head;
             int count = 1;
-            while (count < position-1) {
+            while (count < position - 1) {
                 previous = previous.next;
                 count++;
             }
             ListNode current = previous.next;
             previous.next = current.next;
+        } else {
+            System.out.println("perform action to a valid number of node.");
         }
+    }
+
+    // method to find the middle node of the list.
+    public void middleNode() {
+        ListNode slowPointer = head;
+        ListNode fastPointer = head;
+        while (fastPointer != null && fastPointer.next != null) {
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
+        }
+        assert slowPointer != null;
+        System.out.println(slowPointer.data);
     }
 
     // method to find the length of list.
