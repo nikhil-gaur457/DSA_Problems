@@ -35,6 +35,9 @@ public class SinglyLinkedList {
 
         sll.deleteAtLast();
         sll.display();
+
+        sll.insert(3,12);
+        sll.display();
         System.out.println("length of list " + sll.length());
     }
 
@@ -69,9 +72,9 @@ public class SinglyLinkedList {
     }
 
     // method to delete node from last.
-    public ListNode deleteAtLast() {
+    public void deleteAtLast() {
         if (head == null || head.next == null) {
-            return head;
+            return;
         }
         ListNode current = head;
         ListNode previous = null;
@@ -81,7 +84,25 @@ public class SinglyLinkedList {
         }
         assert previous != null;
         previous.next = null;
-        return current;
+    }
+
+    // method to insert the node the given position.
+    public void insert(int position, int value) {
+        ListNode newNode = new ListNode(value);
+        if (position == 1) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+            ListNode previous = head;
+            int count = 1;
+            while (count < position-1) {
+                previous = previous.next;
+                count++;
+            }
+            ListNode current = previous.next;
+            newNode.next = current;
+            previous.next = newNode;
+        }
     }
 
     // method to find the length of list.
