@@ -140,7 +140,7 @@ public class SinglyLinkedList {
             fastPointer = fastPointer.next.next;
         }
         assert slowPointer != null;
-        System.out.println(slowPointer.data);
+        System.out.println("middle node is " +  slowPointer.data);
     }
 
     // method to find the length of list.
