@@ -52,7 +52,6 @@ public class FractionalKnapsack {
     public static void main(String[] args) {
         int[] weight = {40, 10, 20, 24};
         int[] profit = {280, 100, 120, 120};
-
         int capacity = 60;
 
         double maxValue = getMaxValue(weight, profit, capacity);
