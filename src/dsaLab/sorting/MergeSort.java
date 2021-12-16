@@ -9,7 +9,6 @@ package dsaLab.sorting;
 
 public class MergeSort {
     static void printArray(int[] arr) {
-        int n = arr.length;
         for (int j : arr) {
             System.out.print(j + " ");
         }
