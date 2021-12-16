@@ -12,12 +12,14 @@ import java.util.Stack;
 public class BinaryTree {
     private TreeNode root;
 
-    private class TreeNode { // root - node method.
+    // root-node static class.
+    private static class TreeNode {
         private TreeNode left; // left child of the root.
         private TreeNode right; // right child of the root.
-        private int data; // can be generic type
+        private final int data; // can be generic type
 
-        public TreeNode(int data) { // constructor.
+        // constructor.
+        public TreeNode(int data) {
             this.data = data;
         }
     }
@@ -67,11 +69,47 @@ public class BinaryTree {
         }
     }
 
+    public void inOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(root.left);
+        System.out.print(root.data + " ");
+        inOrder(root.right);
+    }
+
+    public void inOrderUsingIteration() {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode temp = root;
+        while (!stack.isEmpty() || temp!= null) {
+            if (temp != null) {
+                stack.push(temp);
+                temp = temp.left;
+            } else {
+                temp = stack.pop();
+                System.out.print(temp.data + " ");
+                temp = temp.right;
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.createBinaryTree();
+        System.out.print("preOrder Traversal : ");
         binaryTree.preOrder(binaryTree.root);
         System.out.println();
+        System.out.print("preOrder Traversal using Iteration: ");
         binaryTree.preOrderUsingIteration();
+        System.out.println();
+        System.out.print("inOrder Traversal : ");
+        binaryTree.inOrder(binaryTree.root);
+        System.out.println();
+        System.out.print("inOrder Traversal using Iteration: ");
+        binaryTree.inOrderUsingIteration();
     }
 }
